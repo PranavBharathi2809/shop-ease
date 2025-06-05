@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "../app/store";
-import { signUpAPI } from "./Apis/SignUpApis";
-import '../features/styles/Signin.css' // ✅ Ensure you import the CSS
-import Navbar from "./components/Navbar";
+import { AppDispatch, RootState } from "../../app/store";
+import { signUpAPI } from "../Apis/SignUpApis";
+import '../styles/Signin.css' // ✅ Ensure you import the CSS
+import Navbar from "../components/Navbar";
 
 const SignUp: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();

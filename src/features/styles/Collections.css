@@ -1,61 +1,70 @@
 .collectionSection {
-    padding: 10px 20px;
-    background-color: #fefefe;
-    text-align: center;
+  padding: 20px;
+  background-color: #fefefe;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.collectionSection h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ff6f61;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll 30s linear infinite;
+}
+
+.carousel-track img {
+  width: 170px; /* Medium size */
+  height: auto;
+  margin-right: 18px; /* Adjusted margin */
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-track img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
   }
-  
-  .collectionSection h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #ff6f61;
+  100% {
+    transform: translateX(-50%);
   }
-  
-  .carousel {
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-  }
-  
-  .carousel-track {
-    display: flex;
-    width: fit-content;
-    animation: scroll 30s linear infinite;
-  }
-  
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
   .carousel-track img {
-    width: 200px;
-    height: auto;
-    margin-right: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
+    width: 135px; /* Medium size for tablets */
+    margin-right: 14px;
   }
-  
-  .carousel-track img:hover {
-    transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  .carousel-track img {
+    width: 110px; /* Medium size for mobiles */
+    margin-right: 10px;
   }
-  
-  /* Animation */
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .carousel-track img {
-      width: 150px;
-      margin-right: 15px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .carousel-track img {
-      width: 120px;
-      margin-right: 10px;
-    }
-  }
-  
+}

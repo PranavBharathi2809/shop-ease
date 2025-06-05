@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "../app/store";
-import { signInAPI } from "./Apis/SignInAPis";
-import '../features/styles/Signin.css';
+import { AppDispatch, RootState } from "../../app/store";
+import { signInAPI } from "../Apis/SignInAPis";
+import '../styles/Signin.css';
 import { Link, useNavigate } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Navbar from "../components/Navbar";
 
 const SignIn: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -42,7 +42,7 @@ const SignIn: React.FC = () => {
   // Redirect after successful login
   useEffect(() => {
     if (isAuthentication) {
-      navigate("/payment");
+      navigate("/");
     }
   }, [isAuthentication, navigate]);
 
@@ -79,6 +79,9 @@ const SignIn: React.FC = () => {
                 required
               />
             </div>
+            <Link to="/forgot-password" className="forgot-password-link">
+  Forgot Password?
+</Link>
 
             <button
               type="submit"

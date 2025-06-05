@@ -1,6 +1,6 @@
 import React from 'react'
-import SignIn from './features/SignIn'
-import SignUp from './features/Signup'
+import SignIn from './features/auth/SignIn'
+import SignUp from './features/auth/Signup'
 import Product from './features/Product'
 import Cart from './features/Cart/CartPage'
 import MainPage from './features/Pages/MainPage'
@@ -17,6 +17,8 @@ import WomenProduct from './features/Pages/WomenProductList'
 import MenProduct from './features/Pages/MenProductList'
 import ChildrenProduct from './features/Pages/ChildrenProductList'
 import BeautyProduct from './features/Pages/BeautyProductList'
+import ForgotPassword from './features/auth/ForgotPassword'
+import ResetPassword from './features/auth/ResetPassword'
 
 
 const App = () => {
@@ -37,6 +39,8 @@ const App = () => {
       <Route path = '/cart'  element = {<Cart/>}></Route>
       <Route path="/order" element={<OrderHistoryPage />} />
       <Route path="/payment" element={<PaymentPage />} />
+      <Route path='/forgot-password' element={<ForgotPassword/>}/>
+      <Route path = '/reset-password' element ={<ResetPassword/>}/>
      </Routes>
 
 
